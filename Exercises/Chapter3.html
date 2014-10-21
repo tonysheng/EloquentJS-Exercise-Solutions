@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Chapter 3</title>
+  	</head>
+	<body>
+
+		<!-- Minimum -->
+		<script>
+			function min(x, y) {
+				var min = Math.min(x, y);
+				return min;
+			}
+		</script>
+
+		<!-- Recursion -->
+		<script>
+			function isEven(x) {
+				if (x == 0) {
+					return true;
+				}
+				else if (x == 1) {
+					return false;
+				}
+				else if (x < 0) {
+					return isEven(-x);
+				}
+				else {
+					console.log("again");
+					return isEven(x -2);
+				}
+			}
+		</script>
+
+		<!-- Bean Counting-->
+		<script>
+			function countBs(arg, char) {
+				var beans = 0;
+				for (var x = 0; x < arg.length; x++) {
+					if (arg.charAt(x) == char) {
+						beans ++;
+					}
+					else {
+						console.log("nothing happened");
+					}
+				}
+				return beans;
+			}
+		</script>
+
+	</body>
+</html>
