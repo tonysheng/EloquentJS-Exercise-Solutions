@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Chapter 2</title>
+  	</head>
+	<body>
+
+		<!-- Loopin a triangle -->
+		<script>
+			var hashes = "#"
+			for (var counter = 1; counter <= 7; counter++) {
+				console.log(hashes);
+				hashes = hashes + "#"
+			}
+		</script>
+
+		<!-- FizzBuss -->
+		<script>
+			for (var counter = 1; counter <= 100; counter++) {
+				if (counter % 3 == 0 && counter % 5 ==0) {
+					console.log("FizzBuzz");
+				}
+				else if(counter % 3 == 0) {
+					console.log("Fizz");
+				}
+				else if(counter % 5 == 0) {
+					console.log("Buzz");
+				}
+				else {
+					console.log(counter);
+				}
+
+			}
+		</script>
+
+		<!-- Chessboard - not quite working yet... not sure why -->
+		<script>
+			function chessBoard(size) {
+				var board = "";
+				for (var cC = 1; cC <= size; cC++) {
+					for (var rC = 1; rC <= size; rC++) {
+						if ((cC + rC) % 2 == 0) {
+							board += "#";
+						}
+						else {
+							board += " ";
+						}
+					}
+					board += "\n";
+				}
+				return(board);
+			}
+			console.log(chessBoard(8));
+		</script>
+
+  	</body>
+</html>
